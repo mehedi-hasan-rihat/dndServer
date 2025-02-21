@@ -1,6 +1,8 @@
 require("dotenv").config();
+const cors = require("cors");
 const express = require("express");
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 5000;
 
 app.use(express.json()); // Middleware to parse JSON bodies
@@ -79,8 +81,36 @@ async function run() {
       }
     });
 
+
+    app.put("/tasks/status/:id", async (req, res) => {
+        const { id } = req.params;
+        const { status } = req.body;
+  
+        try {
+          const result = await taskCollection.updateOne(
+            { _id: new ObjectId(id) },
+            {
+              $set: {
+               
+                status, // Assuming you have a status field for To-Do, In Progress, Done
+              },
+            }
+          );
+  
+          if (result.matchedCount === 0) {
+            return res.status(404).json({ message: "Task not found" });
+          }
+  
+          res.status(200).json({ message: "Task updated successfully" });
+        } catch (error) {
+          console.error("Error updating task:", error);
+          res.status(500).json({ message: "Error updating task" });
+        }
+      });
+
+
     // DELETE: Delete a task
-    app.delete("/tasks/:id", async (req, res) => {
+    app.deletse("/tasks/:id", async (req, res) => {
       const { id } = req.params;
       try {
         const result = await taskCollection.deleteOne({ _id: new ObjectId(id) });
