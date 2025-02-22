@@ -1,10 +1,10 @@
-# Task Management Application
+# 📝 Task Management Application
 
 Task Management Application is a web-based tool that enables users to manage their tasks efficiently. It supports adding, editing, deleting, reordering, and moving tasks between categories using a **drag-and-drop** interface. Built using **React, Express.js, MongoDB, and Firebase Authentication**, it ensures seamless task organization and real-time updates.
 
 ## 🚀 Live Demo
-- **Frontend:** [Live Frontend Link](https://storied-sunshine-e20d2a.netlify.app/)
-- **Backend:** [Live Backend Link](https://server-theta-sable.vercel.app/)
+- **Frontend:** [Live Frontend](https://storied-sunshine-e20d2a.netlify.app/)
+- **Backend:** [Live Backend](https://server-theta-sable.vercel.app/)
 
 ## 📌 Features
 ✅ Add, edit, delete, and reorder tasks  
@@ -21,9 +21,8 @@ Task Management Application is a web-based tool that enables users to manage the
 - **Real-time Updates:** WebSockets  
 
 ## 📦 Dependencies
-The project uses the following dependencies:
 
-### Frontend
+### Frontend Dependencies
 ```json
 {
   "@dnd-kit/core": "^6.3.1",
@@ -42,3 +41,65 @@ The project uses the following dependencies:
   "sort-by": "^1.2.0",
   "tailwindcss": "^4.0.7"
 }
+```
+
+### Backend Dependencies
+- **Express.js**  
+- **MongoDB**  
+- **Firebase Authentication**  
+- **WebSockets**  
+
+## ⚙️ Installation & Setup
+
+### 🖥️ Frontend Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/mehedi-hasan-rihat/TaskDnD.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd TaskDnD
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+### 🖥️ Backend Setup
+1. Clone the backend repository:
+   ```sh
+   git clone https://github.com/mehedi-hasan-rihat/dndServer.git
+   ```
+2. Navigate to the backend directory:
+   ```sh
+   cd dndServer
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Create a `.env` file and add the necessary environment variables:
+   ```
+   MONGO_URI=your_mongodb_connection_string
+   FIREBASE_API_KEY=your_firebase_api_key
+   ```
+5. Start the server:
+   ```sh
+   npm start
+   ```
+
+## 📖 Documentation & Source Code
+- **Frontend Repository:** [GitHub Link](https://github.com/mehedi-hasan-rihat/TaskDnD)  
+- **Backend Repository:** [GitHub Link](https://github.com/mehedi-hasan-rihat/dndServer)  
+
+## 🤝 Contributors
+- **Mehedi Hasan Rihat** - [GitHub](https://github.com/mehedi-hasan-rihat)  
+
+---
+
+✨ Happy Coding! 🚀
+
